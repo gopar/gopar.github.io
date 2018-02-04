@@ -1,0 +1,16 @@
+name: Pygopar
+description: Trust me, Python will rule the world. And Emacs will guide it.
+meta_description: "Trust me, Python will rule the world. And Emacs will guide it."
+
+markdown: kramdown
+highlighter: pygments
+logo: false
+paginate: 6
+baseurl: /
+domain_name: 'http://pygopar.com'
+google_analytics: 'UA-XXXXXXXX-X'
+plugins: [jekyll-paginate]
+
+# Details for the RSS feed generator
+url:            'pygopar.com'
+author:         'Daniel Gopar'
