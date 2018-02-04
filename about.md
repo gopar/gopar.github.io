@@ -8,10 +8,11 @@ follower of Jesus Christ.
 
 I pretty much love skateboarding, running, hiking and of course Python & Emacs!
 
-<section class="share">
-    <h4>You can pretty much follow me here</h4>
-    <a class="icon-twitter" href="http://twitter.com/pygopar"
-        onclick="window.open(this.href);return false;">
-        <span class="hidden">Twitter</span>
-    </a>
-</section>
+You can pretty much follow me here
+
+Twitter: [@pygopar](https://twitter.com/pygopar)
+
+GitHub: [gopar](https://github.com/gopar)
+
+<img src="/assets/images/profile.jpg" alt="Author's profile picture"
+    style="width: 200px; height: 200px; border-radius: 100%;"/>
