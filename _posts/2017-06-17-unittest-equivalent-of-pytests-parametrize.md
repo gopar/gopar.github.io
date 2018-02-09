@@ -1,8 +1,8 @@
 ---
 layout: post
 date: 2017-06-17
-title: "Pytest Parametrize Unittest Self Subtest"
-permalink: pytest-parametrize-unittest-self-subtest
+title: "Unittest equivalent of Pytest's Parametrize"
+permalink: unittest-equivalent-of-pytests-parametrize
 categories: python
 ---
 
