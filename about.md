@@ -3,10 +3,9 @@ layout: page
 title: About me
 ---
 
-A Half-Mexican, Half-Guatemalan kid who happens to be a Software Engineer, and more importantly a
-follower of Jesus Christ.
+A Half-Mexican, Half-Guatemalan (Mayan) guy who happens to be a Software Engineer.
 
-I pretty much love skateboarding, running, hiking and of course Python & Emacs!
+I pretty much love the outdoors, running and of course Python & Emacs!
 
 You can pretty much follow me here
 
