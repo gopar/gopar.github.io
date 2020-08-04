@@ -10,7 +10,7 @@ permalink: kivy-and-the-back-button
 
 To be able to capture/hook the back button press or the equivalent of it which is the Esc key, you must first bind an event with the current window to do something whenever the keyboard is pressed. Here is an example of how it should look like:
 
-{% highlight python %}
+```python
 from kivy.app import App
 from kivy.uix.button import Button
 from kivy.core.window import Window # Need this import
@@ -38,7 +38,7 @@ class SimpleApp(App):
 
 if __name__ == "__main__":
     SimpleApp().run()
-{% endhighlight %}
+```
 
 There you go! Pretty simple to do. Hope this helps some people.
 

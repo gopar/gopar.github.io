@@ -8,7 +8,7 @@ categories: python
 
 I read [this blog post](http://ominian.com/2017/11/06/python-3-abusing-annotations/) about converting function/method arguments into what their type annotations mentioned they would be. You can read more from that link, but pretty much I got an idea that someone should be able to create fixtures from type annotations. Anyways, here's a proof of concept just using the basic built-in types in Python.
 
-{% highlight python %}
+```python
 from typing import get_type_hints
 
 
@@ -38,6 +38,6 @@ home = create_fixture(Home)
 print(home.address, home.zipcode, home.floaty, home.for_sale)
 # output
 # string 0 0.0 False
-{% endhighlight %}
+```
 
 Pretty cool stuff and it was really simple to do. I decided to try and create my own library to do this. It's currently hosted on Github and called [Pyfta](https://github.com/gopar/pyfta). I need to dig more into the `typing` module to be able to support things like `List[Union[Dict[str,int], int]]`. We'll see how far I get

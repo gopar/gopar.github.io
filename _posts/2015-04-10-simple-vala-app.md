@@ -10,7 +10,7 @@ In this post we'll go over how to create a simple [Vala](https://wiki.gnome.org/
 
 First of we'll create a file named `simple.vala`. And in it we'll put the following:
 
-{% highlight vala %}
+```vala
 // Including the Gtk namespace into the program
 using Gtk;
 
@@ -41,18 +41,18 @@ int main(string[] args){
     Gtk.main();
     return 0;
 }
-{% endhighlight %}
+```
 
 Now to run the program just type
-{% highlight vala %}
+```vala
 vala --pkg=gtk+-3.0 simple.vala
 
-{% endhighlight %}
+```
 You should get something that looks like this
 ![](/assets/images/posts/screen-1.png)
 
 Sweet! We have a window. Next, is to add some buttons, text, and something else called a `Box` which is specifially made to hold widgets such as the ones we are going to use.
-{% highlight vala %}
+```vala
 class Simple: Gtk.Window{
     // New Global var
     Gtk.Label label;
@@ -73,7 +73,7 @@ class Simple: Gtk.Window{
         // add BOX to the window
         this.add(vert_box);
     }
-{% endhighlight %}
+```
 
 Creating buttons and labels is pretty straight forward, the thing that needs some explaining is the `vert_box` variable. We need a `Gtk.Box` instance variable, such as `vert_box`, because the window is only capable of holding one widget at a time. Since `Gtk.Box` widgets are made to hold other widgets, this solves our problem of displaying multiple widgets at a time. The `Gtk.Box` is created with `Gtk.Orientation.VERTICAL` meaning that it will place widgets in a stack from top to bottom, and the number 5, which means how much *spacing* to give in between widgets.
 
@@ -83,7 +83,7 @@ If you run the code you should see the following like this.
 
 If you press the buttons, you'll see that they do nothing. The reason for this is because we haven't told them to do anything yet, so lets do that next.
 
-{% highlight vala %}
+```vala
 class Simple: Gtk.Window{
     public Simple(){
         // PREVIOUS CODE HERE
@@ -103,7 +103,7 @@ class Simple: Gtk.Window{
         label.set_label(num.to_string());
     }
 }
-{% endhighlight %}
+```
 
 The way to bind buttons is by doing `btn_var.clicked.connect(method_to_call)` and in this case `onClick`, will be the method called when the buttons are pressed. What happens inside of that method is pretty straight forward. One thing that you may of asked is how did `onClick` receive an argument if we never said we were going to pass one? The answer is simple, by default whichever method you bind to, it can either have no arguments or it passes the instance that cause the event.
 

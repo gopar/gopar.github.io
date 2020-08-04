@@ -10,16 +10,16 @@ When working with [Google Cloud Endpoints Frameworks(CEF)](https://cloud.google.
 
 For example in my `app.yaml` I had the following:
 
-{% highlight yaml %}
+```yaml
 libraries:
 - name: endpoints
   version: latest
-{% endhighlight %}
+```
 
 You would think that this would let you use the latest version of the GCE V2 but nope. I kept getting the following error:
 
-{% highlight javascript %}
+```javascript
 {"state": "APPLICATION_ERROR", "error_message": "Not Found"}
-{% endhighlight %}
+```
 
 Turns out that you need to completely remove the `endpoints` entry from your `app.yaml` file and then it all works.

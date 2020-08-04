@@ -12,14 +12,14 @@ Python has already had the ability to do this by calling the interpreter on a di
 
 We'll go over how to create an executeable, but first create a directory with the following structure.
 
-{% highlight bash %}
+```bash
 app/
 └── __main__.py
-{% endhighlight %}
+```
 
 Inside of `__main__.py` we will have the following.
 
-{% highlight python %}
+```python
 import sys
 if sys.platform.startswith("win"):
     import tkinter
@@ -33,54 +33,54 @@ def main():
 
 if __name__ == "__main__":
     main()
-{% endhighlight %}
+```
 
 On Windows, `tkinter` automatically comes with the installation of Python, on Linux you would most likely have to install it. If you're on Ubuntu you can just run `sudo apt-get install python3-tk`.
 
 This script just shows a window, thats about it, nothting fancy. Now if we package the app using `zipapp`, the command would be:
 
-{% highlight bash %}
+```bash
 python -m zipapp app
-{% endhighlight %}
+```
 
 This will ouput a file called `app.pyz`. To run your newly created package, all you have to do is type:
 
-{% highlight bash %}
+```bash
 python app.pyz
-{% endhighlight %}
+```
 
 Now what if you don't want to create a `__main__.py` file? Well you can let `zipapp` take of that, for example lets say that instead of naming the `__main__.py` you named it `blah.py`. The command you would run would be:
 
-{% highlight bash %}
+```bash
 python -m zipapp app -m "blah:main"
-{% endhighlight %}
+```
 
 The parameter `-m "blah:main"` is basically saying "Hey, inside the `app` directory there is going to be a file called `blah.py` and inside that file I want you to call the `main` function to start the program.".
 
 Now if the file that you needed to start was inside a package, lets say in a package called "awesome", you would do:
 
-{% highlight bash %}
+```bash
 python -m zipapp app -m "awesome.blah:main"
-{% endhighlight %}
+```
 
 Next is how to rename your output to whatever you'd like, for example we'd like a package with the extension `pyzw` since this is a windowed application. To accomplish this we would run:
 
-{% highlight bash %}
+```bash
 python -m zipapp app -m "blah:main" -o app.pyzw
-{% endhighlight %}
+```
 
 If you'd wanted to, you could of renamed the output to whatever you'd like such as `tada.pyzw` or whatever.
 
 When you are creating a package you can specify what interpreter to use when running the app with `-p`. Heres an example:
 
-{% highlight bash %}
+```bash
 python -m zipapp myapp.pyzw -p "/usr/bin/env python"
-{% endhighlight %}
+```
 
 And to figure out what interpreter a package is using, all you have to do is this:
 
-{% highlight bash %}
+```bash
 python -m zipapp myapp.pyzw --info
-{% endhighlight %}
+```
 
 Sweet! The library is pretty straigh forward to use, and it also comes with it's own small [API](https://docs.python.org/dev/library/zipapp.html#python-api) that you can use in Python.

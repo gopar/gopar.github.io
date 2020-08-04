@@ -12,14 +12,14 @@ Go read the post and try out the solutions given there, if they work then great!
 
 First thing is you have to install `x11-xkb-utils`. This is from the post I mentioned earlier.
 
-{% highlight bash %}
+```bash
 sudo apt-get install x11-xkb-utils
-{% endhighlight %}
+```
 
 Great, now the only thing you have to do is run the following command on the terminal every time you re-focus to the host machine:
 
-{% highlight bash %}
+```bash
 setxkbmap
-{% endhighlight %}
+```
 
 Unfortunately, this is kinda a drag compared to what is said in the earlier post because you have to do this *every time* you focus on your host machine. But it does restore all keyboard keys and shortcuts which was the goal. I've been trying to see if there's any way I can hook vmware to run a command when ever I get out of the VM but so far no luck. If you know how to do this, or know of a different solution, please comment below.

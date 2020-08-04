@@ -9,7 +9,7 @@ If you're using the mock library and pytest's fixtures, then you might be confus
 
 Here is an example:
 
-{% highlight python %}
+```python
 import mock
 import os
 import pytest
@@ -25,4 +25,4 @@ def test_remove_person_file(mock_remove, mock_example, person):
     os.remove('{}-{}.txt'.format(person.fname, person.lname))
 
     mock_remove.assert_called_once_with('test-person.txt')
-{% endhighlight %}
+```

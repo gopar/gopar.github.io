@@ -12,15 +12,15 @@ First you need to install the packages you desire into a directory, I chose `~/.
 
 Next with the correct version of `pip` run
 
-{% highlight bash %}
+```bash
 pip install -U --target ~/.virtualenvs/deps ...
-{% endhighlight %}
+```
 
 Replace the `...` with the desired libraries. Do this for python2 and python3 if you want to.
 
 Next, in `~/.virtualenv/postmkvirtualenv` add the following:
 
-{% highlight python %}
+```python
 # find directory
 SITEDIR=$(virtualenvwrapper_get_site_packages_dir)
 PYVER=$(virtualenvwrapper_get_python_version)
@@ -32,6 +32,6 @@ then
 else
     echo "/Users/gopar/.virtualenvs/elpydeps/" > "$SITEDIR/extra.pth";
 fi
-{% endhighlight %}
+```
 
 This will take care of our default packages every time we create a new virtualenv. Of course, you'll need to manually update the packages but for me it doesn't really matter if they're up to date or not.

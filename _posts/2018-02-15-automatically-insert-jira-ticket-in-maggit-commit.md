@@ -8,7 +8,7 @@ categories: emacs
 
 We use Jira where I work and I find it helpful to include the Jira issue/ticket number pre-populated within the commit message. This only works if the branch I'm working on starts with the Jira issue number. Otherwise it doesn't input anything. Here's the snippet that does so:
 
-{% highlight elisp %}
+``elisp
 ;; If the branch has a jira ticket, also add that on the commit message
 (add-hook 'git-commit-setup-hook
     '(lambda ()
@@ -17,4 +17,4 @@ We use Jira where I work and I find it helpful to include the Jira issue/ticket 
               (words (s-split-words (magit-get-current-branch))))
           (if has-ticket-title
               (insert (format "%s-%s " (car words) (car (cdr words))))))))
-{% endhighlight %}
+```

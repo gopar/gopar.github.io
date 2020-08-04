@@ -9,7 +9,7 @@ categories:
 If you want to add custom response headers to GCE (Google Cloud Endpoints),
 you're going to have to do some monkey patching.
 
-{% highlight python %}
+```python
 import endpoints.util as util
 
 # Note: If someone imports send_wsgi_response before here, the function will NOT be decorated
@@ -21,6 +21,6 @@ def add_headers(wsgi_func):
     return wrapper
 
 util.send_wsgi_response = add_headers(util.send_wsgi_response)
-{% endhighlight %}
+```
 
 I put this bit in my `__init__.py` that takes care of loading up the service, since I want to make sure this runs first. This is specific example for my needs, so customize as you see fit.

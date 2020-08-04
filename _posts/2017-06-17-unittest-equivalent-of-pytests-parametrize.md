@@ -10,7 +10,7 @@ I'm currently using the `unittest` framework for writing tests. One thing I miss
 
 This is the example straight from the [Python Docs](https://docs.python.org/3/library/unittest.html#distinguishing-test-iterations-using-subtests):
 
-{% highlight python %}
+```python
 class NumbersTest(unittest.TestCase):
 
     def test_even(self):
@@ -20,11 +20,11 @@ class NumbersTest(unittest.TestCase):
         for i in range(0, 6):
             with self.subTest(i=i):
                 self.assertEqual(i % 2, 0)
-{% endhighlight %}
+```
 
 And here is it's output (Again from the Python Docs):
 
-{% highlight python %}
+```python
 ======================================================================
 FAIL: test_even (__main__.NumbersTest) (i=1)
 ----------------------------------------------------------------------
@@ -48,4 +48,4 @@ Traceback (most recent call last):
   File "subtests.py", line 32, in test_even
     self.assertEqual(i % 2, 0)
 AssertionError: 1 != 0
-{% endhighlight %}
+```

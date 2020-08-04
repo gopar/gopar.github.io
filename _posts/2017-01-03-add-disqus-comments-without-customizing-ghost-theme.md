@@ -9,7 +9,7 @@ categories:
 I recently moved back to [ghost.org](http://www.ghost.org) as my blogging platform. I was sad to find out that to use Disquis you need to customize your theme. I didn't want to do that cause I'm lazy so I just decided to make it all work with javascript that you can inject into your footer themes. (You can do this by going to your Ghost Admin page and clicking on the `Code Injection` tab)
 
 Anyways, here's the snippet of code that achieved this
-{% highlight javascript %}
+```javascript
 window.onload = function() {
       if(jQuery.inArray(window.location.pathname,["/", "/aboutme/", "/resources/"]) < 0 &&
         !window.location.pathname.includes("/page/")) {
@@ -20,7 +20,7 @@ window.onload = function() {
           // Add Universal Disqus code here
         }
 }
-{% endhighlight %}
+```
 
 I'm pretty much just checking that the comments won't show up in places where I don't want it to, otherwise add the comments. Next, just go do Disqus and add the universal code that they give you. Just add in the javascript bit and your good to go.
 

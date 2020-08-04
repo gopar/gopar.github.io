@@ -17,7 +17,7 @@ I'll explain the second example in the list. I created a custom dialog which wou
 
 Alright, so copy the `validator_example.py`
 
-{% highlight python %}
+```python
 import wx
 ###############################################################################
 class CustomNumbers(wx.Dialog):
@@ -145,7 +145,7 @@ if __name__ == "__main__":
         print("wOW YOU SUCK")
     dlg.Destroy()
     app.MainLoop()
-{% endhighlight %}
+```
 
 Alright so we have a custom dialog class along with a custom validator, `CustomNumValidator`. The way we use validators is by passing an instance of them in the parameters when we are creating a widget, in this example we pass them in the `createInputBox` method when we create the `TextCtrl` widgets. Take a look. Now in our custom validator we have a couple of methods: `Clone`, `TransferToWindow`, `TransferFromWindow` and `Validate`. All these methods are needed by any class that inherits from `wx.Pyvalidator`. The `Clone` method explains itself, and both methods, `TransferToWindow` and `TransferFromWindow`, are used to send data to and from the validator. A link that shows examples on how to use them are above.
 
@@ -153,7 +153,7 @@ The method that we will actually work on is the `Validate` one. In this method w
 
 If you run this example you should see an error message popup when you enter something that is not a number. Validators are pretty easy to use this way once you've seen an example or two. Alrighty now lets move on to the second example. The only thing we have to change is the `Validate` method. Here it is.
 
-{% highlight python %}
+```python
 def Validate(self, win):
     """ """
     high, low = None, None
@@ -180,6 +180,6 @@ def Validate(self, win):
     # All other fail cases have passed
     else:
         return True
-{% endhighlight %}
+```
 
 Here we make use of the `win` argumnet that gets passed into the method. This variable is actually the dialog window that we are using and if we call its `GetChildren` method we will be able to iterate through them until we find the two input boxes that we need. As you can see we search for the input boxes and then save them in `low` and `high`. Next we check if the current input box we are checking has valid input (We don't care if it's the low or high input box, both need to be numerical input). The next conditional statement only runs if we are currently validating the high limit input box, it also only runs if the lower limit is greater than the upper one, since thats not supposed to happen. If all of those conditions pass, as in there werer no errors in validating the data then we say that the data inputed is valid. Now you have seen my version of how to handle this type of situation. If you have a different/official way of doing the same thing, leave a comment I would love to know how you were able to do it.

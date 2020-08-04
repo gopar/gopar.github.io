@@ -10,7 +10,7 @@ This is a follow up post to my previous one where I discuss [how to capture the 
 
 In `main.py` put the following:
 
-{% highlight python %}
+```python
 from kivy.app import App
 from kivy.core.window import Window
 from kivy.uix.boxlayout import BoxLayout
@@ -47,13 +47,13 @@ class ExampleApp(App):
 
 if __name__ == "__main__":
     ExampleApp().run()
-{% endhighlight %}
+```
 
 The only thing that I feel needs to be explained is the `onNextScreen` method. This will be called from our `kv` file which we will create in just a moment, and its sole purpose is to switch screens and add the current screen it's in to `list_of_prev_screens`. This variable will keep a record of visited screens so that we can go to them when the user presses the beloved back button.
 
 Now in `example.kv` put the following:
 
-{% highlight python %}
+```python
 <ExampleRoot>:
     screen_manager: screen_manager
     ScreenManager:
@@ -72,13 +72,13 @@ Now in `example.kv` put the following:
             name: "screen_spider_pig"
             Button:
                 text: "Spider Pig!"
-{% endhighlight %}
+```
 
 Pretty simple stuff so far, and as you can see we pass an instace of the button itself in `onNextScreen` and the name of screen we want to go to next. If you run the app right now, you should be able to iterate through the screens but when you press the back button (in a deskop, press `Esc` to simulate a back button press) the app should just close. Alright, now lets do all the binding and make it possible to go back to previous screens!
 
 `main.py`:
 
-{% highlight python %}
+```python
 class ExampleRoot(BoxLayout):
     # Previous code
     # --------------------------------------------------------------------------
@@ -102,6 +102,6 @@ class ExampleApp(App):
             # Call the "OnBackBtn" method from the "ExampleRoot" instance
             return self.root.onBackBtn()
         return False
-{% endhighlight %}
+```
 
 Sweet! If you run it now, you should be able to go back to previous screens and once there are no more screens to go to, it should just close. Pretty easy stuff, huh? I won't go over the code since it's small and the I think the comments describe what is happening pretty well.

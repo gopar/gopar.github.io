@@ -10,7 +10,7 @@ We'll go over how to create a [Jekyll](http://jekyllrb.com/) site using [Org-mod
 
 ## Folder Structure
 First off, create a root directory, I'll name it `mysite`. Now, once you have done that, mimic the following folder structure:
-{% highlight bash %}
+```bash
 mysite/ # This is the folder you just created
 ├── assets
 │   ├── css
@@ -21,7 +21,7 @@ mysite/ # This is the folder you just created
 ├── org
 │   └── _posts
 └── _posts
-{% endhighlight %}
+```
 
 Ideally, we would want one folder for org files, and another for the Jekyll site. Unfortunately, the way GitHub is, it does [not allow for this type of setup](https://help.github.com/articles/using-jekyll-with-pages/#configuration-overrides) and only checks in the top directory for the files. The price we pay for free web hosting.
 
@@ -30,7 +30,7 @@ The folders *_includes, _layouts*, and *assets* are just for styling and templat
 ## Org-mode Hack
 Next is updating some things in your `init.el` file. Just copy, paste then modify to meet your needs:
 
-{% highlight  common-lisp %}
+```common-lisp
 ;; For jekyll
 (setq org-publish-project-alist
     '(("org-mysite"
@@ -56,7 +56,7 @@ Next is updating some things in your `init.el` file. Just copy, paste then modif
        :table-of-contents nil)
 
       ("mysite" :components ("org-mysite" "org-static-mysite"))))
-{% endhighlight %}
+```
 
 I got this bit from the [org-mode](http://orgmode.org/worg/org-tutorials/org-jekyll.html) site. I tweaked it a bit. Once you have done that, evaluate the statement, reload the file, or restart emacs to make the change take effect.
 
@@ -87,7 +87,7 @@ Okay, go to your terminal and go to your project root directory. Next, run `jeky
 ## Deploying to GitHub (Finally)
 You are now ready to show off your site! First thing you need to do is create an empty repository (Don't add a readme or anything) in github with the following format: `USERNAME.github.io`. My user name is *gopar*, so mine would be `gopar.github.io`. Once the repo is created, just copy and run these commands from the **root** directory of your project. In this case, our root directory is `mysite`.
 
-{% highlight bash %}
+```bash
 echo "# USERNAME.github.io" >> README.md
 echo "_site/" > .gitignore
 git init
@@ -95,6 +95,6 @@ git add .
 git commit -am "first commit"
 git remote add origin https://github.com/USERNAME/USERNAME.github.io.git
 git push -u origin master
-{% endhighlight %}
+```
 
 If you now go to your browser and type `USERNAME.github.io`, you should see your new website! If you want to see an example repo of this, check out the [emacs meetup](https://github.com/emacsmc/emacsmc.github.io) I created. Hope this helps :)

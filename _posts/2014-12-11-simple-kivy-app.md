@@ -14,7 +14,7 @@ To begin you must first install Kivy and it's dependencies. If your on Windows l
 
 Alright, lets being. First create a file called `main.py`
 
-{% highlight python %}
+```python
 # Third Party Libraries
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
@@ -29,7 +29,7 @@ class SimpleApp(App):  # 1
 
 if __name__ == "__main__":
     SimpleApp().run()
-{% endhighlight %}
+```
 
 If you run this you shuld simply just see a black screen, just like below.
 ![](/assets/images/posts/black_screen.png)
@@ -40,20 +40,20 @@ The App class that we import is the base for all kivy applications. It's what st
 Now for the next part. Create a file called `simple.kv`. This type of file is a *kivy* file, it's pretty darn awesome with what we can with it. It's use is to organize the layout of our User Interface (UI). And it **will** make our lives easier. One thing that should be clear is that we **must** name the kivy file the same name we named our App instace class, which in this case is `SimpleApp`. Don't need to include the 'App' part just the bit before it and also make it all lower case. For example lets say my App class is called `ViceVersaApp`, then the kv file would be `viceversa.kv`.
 
 Lets add stuff to `simple.kv`
-{% highlight python %}
+```python
 <SimpleRoot>:
     orientation: "vertical"
     Button:
         text: "Well well well..."
         on_release: print("HI!")
-{% endhighlight %}
+```
 
 Here we defined how the `SimpleRoot` class should look like. Now since the class inherits from BoxLayout, we have to tell it how to organize things, either vertical or horizontal. We want to organize things from top to bottom so vertical, thats what line 2 is for. Next we create a Button widget. We say what it's text should be and what should happen when the button is pressed and then released. So far it's pretty readable. One thing that we will see is that the more attributes/widgets we add, the more indentation we will have to do, kind of like Python. Run the `main.py` and your program should look like this:
 ![](/assets/images/posts/simple_button.png)
 
 When you press and release the button, you should be able to see the `"HI!"` message in your output. Also the default behavior for the `BoxLayout` is to fill up all the space it can. As you can see the button took up the whole screen, if we had two buttons then each button would have 50/50 space and if there were three then it would be 1/3, 1/3, and 1/3. I think you get the picture. Remember we can also override that behavior. Well now we know how to add stuff, so lets erase what we have and add a Label and two buttons under it.
 
-{% highlight python %}
+```python
 <SimpleRoot>:
     orientation: "vertical"
     padding: root.width * .02, root.height * .02
@@ -73,14 +73,14 @@ When you press and release the button, you should be able to see the `"HI!"` mes
         Button:
             text: "Subtract"
             on_release: label_text.text = str(int(label_text.text) - 1)
-{% endhighlight %}
+```
 
 Here we created the Label and two buttons inside a BoxLayout. The `Label` has three things inside it: text, font\_size and id. The first two are pretty easy to figure out. Text is what it'll be showing and font_size is self explanatory. The id attribute is a way for referencing that widget with others. You can see that the labels id, `label_text`, is being used by the buttons when they are pressed. They are calling the label by using it's id. Now lets move to the buttons. The buttons are inside a BoxLayout because we want them to be next to each other (That's why the BoxLayout is using "horizontal"). We give the BoxLayout "30dp" for spacing and then we create our two buttons. Each button has text and it knows what to do when the button is released. In this case the buttons will either add or subtract the value that is set on the Label. The picture below explains the padding and spacing between widgets. Quick note is that padding is `root.width * .02, root.height * .02` because we want it to take up 2 percent of the total screen width and height. Mess around with that number and experiment.
 ![](/assets/images/posts/label_two_buttons.png)
 
 Alright sweet. We have our first part of the app done! Now for the second half. Here we go.
 
-{% highlight python %}
+```python
 <SimpleRoot>:
     orientation: "vertical"
     padding: root.width * .02, root.height * .02
@@ -110,11 +110,11 @@ Alright sweet. We have our first part of the app done! Now for the second half. 
     Button:
         text: "Press Me"
         on_release: root.on_our_btn_release(text_input.text)
-{% endhighlight %}
+```
 
 On the second part of our program we create a `TextInput`, set its `id`, `hint_text` and `font_size`. So far so good. Now on the Button widget we set its text and also told it what to do when it gets released. The line `root.on_our_btn_release(text_input.text)` can be broken down. The word `root` is a keyword that is special to kivy files only. It simply mean to go grab the left most parent widget which in this case it's `<SimpleRoot>`. Once we have that widget we are going to call a method that it has. The method we call is `on_our_btn_release` and we'll be passing the text that was entered into the TextInput widget. You might be asking where this method was created, well we havent created it so lets go create in the python file.
 
-{% highlight python %}
+```python
 # New imports
 from kivy.uix.popup import Popup
 from kivy.uix.label import Label
@@ -123,7 +123,7 @@ class SimpleRoot(BoxLayout):
         text = Label(text="Hello, {}!".format(text_input))
         pop_up = Popup(title="Our Title!", content=text, size_hint=(.7, .7))
         pop_up.open()
-{% endhighlight %}
+```
 
 As you can see we can communicate back and forth between the kivy and python files. This can be very handy. This method takes in some text, creates a Label object that uses the text, creates a pop-up message that uses that Label and then finally we display it to the screen. The only thing I feel I should explain is the Popup. The Popup takes in a string to be used as the title, and the content attribute is what you want to show. We also tell it to take up 70% of the screen in height and width by using `size_hint`. If you run the program, it should look like the pictuers below.
 ![](/assets/images/posts/simple_app_final2.png)
