@@ -1,7 +1,7 @@
 ---
 layout: post
+date: 2020-08-03
 title: "Google App Engine's `DistributionNotFound: google-cloud-ndb`"
-date: 2020-08-03 10:18:00
 categories: python
 permalink: google-app-engines-distribution-not-found-google-cloud-ndb
 ---
