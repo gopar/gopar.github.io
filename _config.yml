@@ -3,7 +3,10 @@ description: Trust me, Python will rule the world. And Emacs will guide it.
 meta_description: "Trust me, Python will rule the world. And Emacs will guide it."
 
 markdown: kramdown
-highlighter: pygments
+# highlighter: pygments
+kramdown:
+  syntax_highlighter_opts:
+    disable : true
 logo: false
 paginate: 6
 baseurl: ""
