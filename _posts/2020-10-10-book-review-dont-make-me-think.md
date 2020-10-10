@@ -21,4 +21,5 @@ I decided to pick up [Don't Make Me Think (Revisited)](https://amzn.to/3lCh6SD) 
 
 ### Overall
 
-The book is under 200 pages and would recommend for anyone wanting to learn more about UI/UX, or just in general on how the structure of websites came to be.
+The book is under 200 pages and would *strongly* recommend it for anyone wanting to learn more about UI/UX, or just in general on how the structure of websites came to be.
+It's amazing that the things he goes through are pretty simple, but thats the point, simple is best.
