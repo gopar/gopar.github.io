@@ -15,7 +15,7 @@ First create two new serializers, which will be the ones that we'll use in the r
 I created a file called `serializers.py` in a folder named `helper` which will hold things that I'm overwriting from 3rd parties.
 
 
-```
+```python
 from dj_rest_auth.registration.serializers import RegisterSerializer
 from dj_rest_auth.serializers import LoginSerializer
 from rest_framework import serializers
@@ -42,7 +42,7 @@ class CustomLoginSerializer(LoginSerializer):
 
 Second step is tell django to use these new serializers and to forget about using the `username` field for anything. Go to `settings.py` file and add these
 
-```
+```python
 ### Django AllAuth settings
 # Telling Allauth that we will NOT use username
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None
