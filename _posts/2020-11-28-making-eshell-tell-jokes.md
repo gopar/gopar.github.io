@@ -20,7 +20,7 @@ in charge of displaying the banner on startup (who would of guessed). With that 
   (eshell-banner-message  '(funcall (nth (random (length gopar/request-jokes)) gopar/request-jokes))))
 ```
 
-_Note_: I am using `[use-package](https://github.com/jwiegley/use-package)` but same functionality should be available with the use of `eval-after-load`
+_Note_: I am using [`use-package`](https://github.com/jwiegley/use-package) but same functionality should be available with the use of `eval-after-load`
 
 What I'm doing above is setting `eshell-banner-message` (which can be any s-exp) to a function that returns a string (the joke).
 The function itself is randomly selecting an element from `gopar/request-jokes` (which we will define in moment), once it has selected an element, it will call it (all the elements in the list are functions)
@@ -57,7 +57,7 @@ Here is how I'm defining the variables and how I'm querying the apis
   (setq gopar/request-jokes '(gopar/request-chuck-norris-joke gopar/request-dad-joke)))
 ```
 
-First thing to notice is that I am using `[request](https://github.com/tkf/emacs-request)` which allows me to effortlessly make network requests \o/
+First thing to notice is that I am using [`request`](https://github.com/tkf/emacs-request) which allows me to effortlessly make network requests \o/
 Next, you can see I have 2 functions (`gopar/request-dad-joke` and `gopar/request-chuck-norris-joke`) that return a joke from their apis, and am storing both
 those functions in `gopar/request-jokes` (which is what eshell banner is using).
 
