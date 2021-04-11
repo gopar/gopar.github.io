@@ -51,31 +51,35 @@ const RichEditor = ({ name, onUpdate }) => (
         if (onUpdate) onUpdate(html);
       };
 
+      const toolbar = {
+        options: ['inline', 'blockType', 'list'],
+        inline: {
+          inDropdown: false,
+          className: undefined,
+          component: undefined,
+          dropdownClassName: undefined,
+          options: ['bold', 'italic', 'underline', 'strikethrough'],
+        },
+        blockType: {
+          inDropdown: true,
+          options: ['Normal', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6'],
+        },
+        list: {
+          inDrodown: false,
+          options: ['unordered', 'ordered'],
+        },
+      }
+
+      const editorStyle = { border: '1px solid #565c65', height: '10rem' }
+
       return (
         <Editor
+          tabIndex="0"
           spellCheck
           defaultEditorState={defaultEditorState}
           onChange={onInternalChange}
-          tabIndex="0"
-          editorStyle={{ border: '1px solid #565c65', height: '10rem' }}
-          toolbar={{
-            options: ['inline', 'blockType', 'list'],
-            inline: {
-              inDropdown: false,
-              className: undefined,
-              component: undefined,
-              dropdownClassName: undefined,
-              options: ['bold', 'italic', 'underline', 'strikethrough'],
-            },
-            blockType: {
-              inDropdown: true,
-              options: ['Normal', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6'],
-            },
-            list: {
-              inDrodown: false,
-              options: ['unordered', 'ordered'],
-            },
-          }}
+          editorStyle={editorStyle}
+          toolbar={toolbar}
         />
       );
     }}
