@@ -9,7 +9,7 @@ categories: engineering
 As I've worked in tech, I've come to appreciate when engineers are considerate of other engineers.
 (If you're a junior engineer reading this, I implore you to do all this and you will stand out)
 
-Here are a few things that in my mind, make an engineer "considerate":
+Here are a few things that in my mind, make an engineer "kind":
 
 ## Meaningful Git Messages
 
@@ -27,7 +27,7 @@ Here are two things:
 3. Not shown here, but in commit messages you are allowed to add extra text to describe more in detail
    about the changes made.
 
-For better guidance, read this which was my starting point: https://chris.beams.io/posts/git-commit/
+For better guidance, read this which was my starting point: [https://chris.beams.io/posts/git-commit/](https://chris.beams.io/posts/git-commit/)
 
 ## To The Point Messages
 
@@ -60,7 +60,7 @@ This is generally the format I go with, give everything in one go, with differen
 I find it easier to read and would love for someone to send me messages like this. (No one has -_-)
 Also the jira ticket is usually linked to the actual ticket for easy access.
 
-For some guidance, ideas on messaging etiquette read this: https://slack.com/intl/en-gb/blog/collaboration/etiquette-tips-in-slack
+For some guidance, ideas on messaging etiquette read this: [https://slack.com/intl/en-gb/blog/collaboration/etiquette-tips-in-slack](https://slack.com/intl/en-gb/blog/collaboration/etiquette-tips-in-slack)
 
 ## Always lint/format before push
 
