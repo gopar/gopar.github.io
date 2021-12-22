@@ -65,7 +65,7 @@ For some guidance, ideas on messaging etiquette read this: [https://slack.com/in
 ## Always lint/format before push
 
 I'm surprised when I see commits/PRs failing because they didn't pass the linter/formatter check.
-This can be easily avoided if we all ran our linters before commiting (git hooks anyone?)
+This can be easily avoided if we all ran our linters before committing (git hooks anyone?)
 These tools are here to make it more readable/easier to digest when reviewing.
 
 Also, if you have something like github that comments wherever linter/formatter violations occurred in your PR,
@@ -94,7 +94,7 @@ For your PR code, please take your time to review and:
 
 ## Document your (and someone else's) code
 
-When a codebase grows to a certain size, its hard to maintain, especially with all the due dates and what nots.
+When a codebase grows to a certain size, its hard to maintain, especially with all the due dates and what not's.
 Cause of that, I've come to love/hate a few things but for now I'll mainly talk about comments.
 
 *Love them when they are right.*

@@ -11,17 +11,17 @@ I've been playing with tools and methods on how to make myself stay productive.
 I've noticed that being physically present at work doesn't make me productive at all, so I started playing with tools and methods
 to see if I can change this, and long story short, it has.
 
-This is a quick rundown of tools and explanation on why I use them and what/how they work.
+This is a quick rundown on tools and explanations on why I use them and what/how they work.
 
-One thing before I start is that I greatly **dislike** moving my hand from the keyboard to the mouse back and forth.
+One thing before I start is that I greatly **dislike** moving my hand from the keyboard to the mouse, and back and forth.
 So most of these help with that.
 
 - **[Org Mode](https://orgmode.org/)**
 
 
-    This is an *amazing* free tool. It helps with organizing almost anything and everything. Todos, calender/agenda, spread sheets, literate programming, etc.
-    Highly customizeable is almost every way and runs inside of GNU Emacs which is an editor that I also metion in this list.
-    Another good alternative is a tool called [Notion](https://www.notion.so/),it's been gaining a lot of popularity but lost interest since
+    This is an *amazing* free tool. It helps with organizing almost anything and everything. Todos, calendar/agenda, spread sheets, literate programming, etc.
+    Highly customizeable in almost every way and runs inside of GNU Emacs which is an editor that I also mention in this list.
+    Another good alternative is a tool called [Notion](https://www.notion.so/),it's been gaining a lot of popularity but I lost interest since
     I can't control everything from the keyboard. Also, the free version can be very limiting if you end up going pretty deep in the rabbit hole.
 
 - **[Vimium](https://vimium.github.io/)**
@@ -60,7 +60,7 @@ So most of these help with that.
     I found it difficult at first but then it started to become easier and easier. So just stick to it \o/
 
     Also, all of these numbers can be changed (eg, work for 30 mins and take 10 mins break) to make it work for you.
-    I find it that the default numbers work for me and somtimes, I work an extra minute or two after the 25 mins are up just to wrap up.
+    I find it that the default numbers work for me and sometimes, I work an extra minute or two after the 25 mins are up just to wrap up.
     If I realize that I'm spending more than 3 mins extra on the task, I stop and take the break.
 
 
@@ -69,7 +69,7 @@ So most of these help with that.
 
     An editor that's pretty customizable and can nearly do anything and everything. The only editor I use for programming.
 
-    Althuogh, it should be mentioned that it takes a while to learn since it's primarily keyboard driven,
+    Although, it should be mentioned that it takes a while to learn since it's primarily keyboard driven,
     of course you can use the mouse to move around but I've found that not many people do that.
 
 - **[Amethys](https://ianyh.com/amethyst/)**
@@ -77,18 +77,18 @@ So most of these help with that.
 
     A tiling Window Manager (WM) for Mac.
 
-    When I was in linux I went nuts with finding the perfect tiling manager and ultimately settled for [stumpwm](https://stumpwm.github.io/).
+    When I was in Linux I went nuts with finding the perfect tiling manager and ultimately settled for [stumpwm](https://stumpwm.github.io/).
     If you've never heard of a window manager, it basically lets you controls all your windows and lets you decided what to with them via keystrokes.
     Pretty neat!
 
-    Sadly there the closest I found to that was Amethys, which works well but it just doens't feel the same. Anywho, if you've never
+    Sadly there the closest I found to that was Amethys, which works well but it just doens't feel the same. Anyhow, if you've never
     tried Window Managers, I'd highly suggest checking one out.
 
 - **[12 Week Year](https://www.asianefficiency.com/podcast/288-12-week-year/)**
 
     A method of actually achieving your yearly goals.
 
-    I'm no expert in this topic since I just started using it, but cehcking out the link above will go more into depth, but I'll do a quick breakdown
+    I'm no expert in this topic since I just started using it, but checking out the link above will go more into depth, but I'll do a quick breakdown
     from what I understand.
 
     You break up your year into 12 weeks. In those 12 weeks, you focus on achieving some type of goal (learning guitar, get fit, create a company, etc)
@@ -98,7 +98,7 @@ So most of these help with that.
 - **Listening/Watching in 2X Speed**
 
 
-    This isn't really a tool but something that never occured to me.
+    This isn't really a tool but something that never occurred to me.
 
     If you simple speed up a video/audio 2X, you'll be able to consume the content faster and not loose any information while doing so.
     It takes a bit of practice to listen/watch things in 2X but once you're there you can pretty much take on information much faster/quicker.
@@ -108,8 +108,8 @@ So most of these help with that.
 
 
     If you're anything like me, then you probably forget things pretty frequently which is annoying.
-    Especially if you have to do something, now I've gotten to the habit of saving everything and I mean everything to my calender,
-    no matter how small. This has helped alot in realizing and priotizing things no matter what they are.
+    Especially if you have to do something, now I've gotten to the habit of saving everything and I mean everything to my calendar,
+    no matter how small. This has helped a lot in realizing and prioritizing things no matter what they are.
 
 - **Pen and Paper for problem solving**
 
@@ -118,6 +118,6 @@ So most of these help with that.
     There really isn't anything else I can add to this but to simply just try it, even if you were like me not believing it worked.
 
 
-Of course, I'm still learning how to be more productive/efficient. Some of the ways I go about learning new things is by listenting to podcasts.
+Of course, I'm still learning how to be more productive/efficient. Some of the ways I go about learning new things is by listening to podcasts.
 A podcast I really like is [The Productivity Show](https://www.asianefficiency.com/podcast/) which where I've learned quite a bit of things
 and I hope it'll help you as well.
