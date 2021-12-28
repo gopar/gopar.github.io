@@ -8,7 +8,7 @@ logo: false
 paginate: 6
 baseurl: ""
 domain_name: 'http://pygopar.com'
-google_analytics: 'UA-XXXXXXXX-X'
+google_analytics: 'UA-60497034-1'
 plugins: [jekyll-paginate]
 
 # Details for the RSS feed generator
