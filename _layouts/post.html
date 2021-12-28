@@ -1,6 +1,7 @@
 ---
 layout: default
 disqus: false
+github: true
 archive: false
 post_class: post-template
 ---
@@ -84,6 +85,16 @@ post_class: post-template
             <!-- Disqus comments -->
             {% if page.disqus %}
                 {% include disqus.html %}
+            {% endif %}
+
+            {% if page.github %}
+                <script src="https://utteranc.es/client.js"
+                        repo="gopar/gopar.github.io"
+                        issue-term="pathname"
+                        theme="gruvbox-dark"
+                        crossorigin="anonymous"
+                        async>
+                </script>
             {% endif %}
 
         </footer>
