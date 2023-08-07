@@ -9,6 +9,7 @@ I pretty much love the outdoors, running and of course Python & Emacs!
 
 You can pretty much follow me here
 
+YouTube: https://www.youtube.com/@gopardaniel
 Twitter: [@pygopar](https://twitter.com/pygopar)
 
 GitHub: [gopar](https://github.com/gopar)
